@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ices>
+    <background>0</background>
+    <logpath>/var/log/ices</logpath>
+    <logfile>ices.log</logfile>
+    <loglevel>3</loglevel>
+    <consolelog>0</consolelog>
+    <pidfile>/var/pid/ices2.pid</pidfile>
+    <stream>
+        <metadata>
+            <name>Total Collection Randomized</name>
+            <genre>All Genres</genre>
+            <description>The entire music collection has been randomized...</description>
+            <url>https://192.168.0.2/</url>
+        </metadata>
+        <input>
+            <module>playlist</module>
+            <param name="type">script</param>
+            <param name="program">/usr/local/bin/randomogg</param>
+        </input>
+	<instance>
+            <hostname>orange</hostname>
+            <port>8000</port>
+            <password>nx8J33aY</password>
+            <mount>/mount.ogg</mount>
+            <reconnectdelay>3</reconnectdelay>
+            <reconnectattempts>3</reconnectattempts>
+            <retry-initial>1</retry-initial>
+        </instance>
+	</stream>
+</ices>
